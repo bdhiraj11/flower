@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Flower</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        #hero {
+            height: 100%;
+            padding: 120px 0;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.682), rgba(45, 45, 45, 0.644)), url(./image/pexels-photo-1083895.jpeg);
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #hero .hero_flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+            color: #fff;
+            padding: 10px;
+
+        }
+
+        #hero .hero_flex h1 {
+            font-size: 65px;
+            font-family: 'Merienda', cursive;
+        }
+
+        #hero .hero_flex p {
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            word-spacing: 2px;
+            margin: 15px 0 0 0;
+
+        }
+
+        #hero .hero_flex .btn {
+            text-align: center;
+            padding: 50px 0px;
+        }
+
+        #hero .hero_flex .btn button {
+            padding: 13px 27px;
+            background-color: #97a9bd;
+            border: #97a9bd;
+            color: white;
+            font-size: 20px;
+            transition: 00.3s ease-in-out;
+        }
+
+        #hero .hero_flex .btn button:hover {
+            background: transparent;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+
+        #box {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #box .card {
+            height: 280px;
+            width: 280px;
+            margin: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            border-top-left-radius: 95px;
+            border-bottom-right-radius: 95px;
+            transition: 0.3s ease-in-out;
+        }
+
+        #box .card i {
+            margin: 0 0 40px 0;
+            background-color: white;
+            font-size: 35px;
+            color: black;
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        #box .card h2 {
+            margin: 0 0 10px 0;
+            font-weight: 500;
+            font-size: 21px;
+        }
+
+        #box .card p {
+            font-size: 13px;
+        }
+
+        #box .card1 {
+            background-color: #97a9bd;
+        }
+
+        #box .card2 {
+            background-color: #bbbd97;
+        }
+
+        #box .card3 {
+            background-color: #e789dc;
+        }
+
+        #box .card4 {
+            background-color: #e37a8f;
+        }
+
+        #box .card:hover {
+            border-radius: 0;
+        }
+
+        #banner {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner img {
+            background-size: cover;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        #banner .child {
+            height: 400px;
+            background-color: white;
+            margin: 60px 30px;
+        }
+
+        #banner .child .arrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s ease-in-out;
+            padding: 5px 0 0 15px;
+        }
+
+        #banner .child .arrow h1 {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+
+        #banner .child .arrow i {
+            padding: 0 10px 0 0;
+        }
+
+        #banner .child .arrow:hover {
+            background-color: #97a9bd;
+            color: white;
+        }
+
+        #one {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba(163, 187, 198, 0.567), rgba(7, 8, 8, 0.858)), url(./image/background-02.jpg);
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #one p {
+            text-align: center;
+            color: white;
+            padding: 70px 0 0 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #one h1 {
+            text-align: center;
+            color: white;
+            padding: 5px 0 0 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #one .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #one .parent .box {
+            height: 250px;
+            width: 350px;
+            background-color: white;
+            margin: 30px;
+            transition: o.3s ease-in-out;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        #one .parent .box:hover {
+            background-color: #97a9bd;
+            color: white;
+        }
+
+        #one .parent .box i {
+            background-color: #97a9bd;
+            color: white;
+            font-size: 30px;
+            padding: 13px 0 0 0;
+            transition: 0.3s ease-in-out;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+
+        }
+
+        #one .parent .box:hover i {
+            background-color: white;
+            color: #97a9bd;
+        }
+
+        #one .parent .box h2 {
+            text-align: center;
+            font-size: 18px;
+            padding: 20px 0;
+        }
+
+        #one .parent .box p {
+            text-align: center;
+            color: black;
+            transition: 0.3s ease-in-out;
+            font-size: 13px;
+            padding: 2px;
+        }
+
+        #one .parent .box p:hover {
+            background-color: #97a9bd;
+            color: #fff;
+        }
+
+        @media screen and (max-width:500px) {
+            #one .parent .box p {
+                font-size: 12px;
+            }
+
+            #one .parent .box h2 {
+                font-size: 15px;
+            }
+        }
+
+        #dhiraj {
+            height: 100%;
+            width: 100%;
+            background-color: #f4f4f4;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #dhiraj h4 {
+            text-align: center;
+            padding: 80px 0 0 0;
+        }
+
+        #dhiraj h1 {
+            text-align: center;
+            font-size: 40px;
+
+        }
+
+        #dhiraj .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #dhiraj .card {
+            height: 480px;
+            width: 350px;
+            margin: 25px;
+
+        }
+
+        #dhiraj .card:hover {
+            box-shadow: grey 2px 2px 2px 0;
+        }
+
+        #dhiraj .card .image {
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #dhiraj .card h2 {
+            text-align: center;
+        }
+
+        #dhiraj .card p {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        #india {
+            height: 100%;
+            width: 100%;
+            background-color: #97a9bd;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #india h4 {
+            text-align: center;
+            font-size: 15px;
+            color: #fff;
+            padding: 80px 0 0 0;
+        }
+
+        #india h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+
+        }
+
+        #india .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #india .card {
+            height: 400px;
+            width: 600px;
+            margin: 20px 20px 0 20px;
+        }
+
+        #india .card .innerChild {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #india .card .innerChild .profession {
+            text-align: left;
+            margin: 0 0 0 20px;
+            color: #fff;
+        }
+
+        #india .card .image {
+            background-size: cover;
+            object-fit: cover;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+
+        #india .card .box {
+            width: auto;
+            padding: 15px;
+            background-color: white;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            color: #000;
+            margin: 60px 0 0 0;
+        }
+
+        #india p {
+            text-align: center;
+            font-size: 14px;
+
+        }
+
+        #india .card .box p {
+            color: #000;
+        }
+
+        #top {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #top h5 {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.733);
+            font-size: 18px;
+            padding: 70px 0 0 0;
+        }
+
+        #top h1 {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 30px;
+        }
+
+        #top .parent {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #top .parent .card {
+            height: 280px;
+            width: 380px;
+            margin: 55px;
+        }
+
+        #top .parent .card .image {
+            height: 280px;
+            width: 380px;
+            transition: 0.3s ease-in-out;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #top .parent .card .image:hover {
+            filter: grayscale(180%);
+            margin: -15px 0 0 0;
+        }
+
+        #top h3 {
+            color: rgba(0, 0, 0, 0.645);
+            font-size: 16px;
+        }
+
+        #tap {
+            height: 100%;
+            width: 100%;
+            background-color: #f4f4f4;
+            margin: 100px 0 0 0;
+        }
+
+        #tap h6 {
+            text-align: center;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.695);
+            padding: 80px 0 0 0;
+
+        }
+
+        #tap h1 {
+            text-align: center;
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        #tap .parent {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0 0 0;
+        }
+
+        #tap .parent .card {
+            height: auto;
+            width: 600px;
+            margin: 20px;
+        }
+
+        #tap .card .box {
+            height: 60px;
+            width: 580px;
+            background-color: #fff;
+            text-align: left;
+            margin: 0 0 40px 0;
+            display: flex;
+            align-items: center;
+            transition: 0.3s ease-in-out;
+        }
+
+        #tap .parent .card .box i {
+            font-size: 18px;
+            color: #fff;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 50%;
+            background-color: #a197bd;
+            transition: 0.3s ease-in-out;
+        }
+
+        #tap .parent .card .box .img1 {
+            background-color: #bda697;
+        }
+
+        #tap .parent .card .box .img {
+            background-color: #97bdab;
+        }
+
+        #tap .parent .card .box:hover i {
+            background-color: #fff;
+            color: #a197bd;
+        }
+
+        #tap .parent .card .box:hover .img1 {
+            background-color: #fff;
+            color: #bda697;
+        }
+
+        #tap .parent .card .box:hover .img {
+            background-color: #fff;
+            color: #97bdab;
+
+        }
+
+        #tap .parent .card .box:hover {
+            background-color: #a197bd;
+            color: #fff;
+        }
+
+        #tap .parent .card .box1:hover {
+            background-color: #bda697;
+            color: #fff;
+        }
+
+        #tap .parent .card .box2:hover {
+            background-color: #97bdab;
+            color: #fff;
+        }
+
+        #tap h2 {
+            color: rgba(0, 0, 0, 0.658);
+            padding: 0 0 18px 0;
+        }
+
+        #tap p {
+            color: rgba(0, 0, 0, 0.703);
+            padding: 0 0 10px 0;
+        }
+
+        #tap .parent .card .namefield {
+            height: 45px;
+            width: 500px;
+            padding: 15px;
+            border: #fff;
+        }
+
+        #tap .parent .card .emailfield {
+            height: 45px;
+            width: 500px;
+            padding: 15px;
+            border: #fff;
+        }
+
+        #tap .card .btn button {
+            font-size: 20px;
+            font-weight: 400;
+            padding: 3px 20px;
+            transition: 0.3s ease-in-out;
+            color: #fff;
+            background-color: #007bff;
+
+        }
+
+
+        #tap .card .btn button:hover {
+            background-color: #fff;
+            color: #000;
+            letter-spacing: 1px;
+        }
+
+        @media screen and (max-width:882px) {
+            #tap .parent .card {
+                width: 400px;
+                height: auto;
+            }
+
+            #tap .card .box {
+                width: 380px;
+            }
+
+            #tap .parent .card .namefield {
+                width: 380px;
+            }
+
+            #tap .parent .card .emailfield {
+                width: 380px;
+            }
+        }
+
+        #trip {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.796);
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        #trip h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 40px;
+            padding: 25px;
+        }
+
+        #trip p {
+            color: #fff;
+            text-align: center;
+        }
+        #trip .parent{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #trip i {
+            font-size: 20px;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 50%;
+           
+        }
+
+        #trip .face:hover {
+            background-color: rgba(19, 19, 183, 0.773);
+            color: white;
+        }
+
+        #trip .insta:hover {
+            background-color: rgba(255, 0, 0, 0.964);
+            color: #fff;
+        }
+
+        #trip .googl:hover {
+            background-color: rgb(255, 0, 247);
+            color: #f4f4f4;
+        }
+
+        #trip .twit:hover {
+            background-color: rgb(54, 131, 162);
+            color: #fff;
+        }
+
+        #trip .link:hover {
+            background-color: rgb(0, 172, 239);
+            color: #fff;
+        }
+
+        #trip .tel:hover {
+            background-color: rgb(41, 118, 148);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="hero">
+        <div class="hero_flex">
+            <h1>Faucibus Porttitor Metus</h1>
+            <p>In nibh nullam egestas velit laoreet nullam elementum ipsum pharetra <br> suscipit leo augue pretium
+                felis
+                nisl
+                vitae ipsum curabitur quis libero.
+            </p>
+            <div class="btn">
+                <button>Tristique vehicula</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="box">
+        <div class="card card1">
+            <i class="fa-brands fa-google"></i>
+            <h2>Feugiat Fermentum</h2>
+            <p>Ac orci proin porttitor lacus <br> eget mi pellentesque non.</p>
+        </div>
+
+
+        <div class="card card2"> <i class="fa-brands fa-facebook"></i>
+            <h2>Malesuada Accumsan</h2>
+            <p>Sapien sed metus congue <br> sodales vivamus scelerisque.</p>
+        </div>
+
+
+        <div class="card card3"> <i class="fa-brands fa-twitter"></i>
+            <h2>Mauris Placerat</h2>
+            <p>Et interdum vulputate purus <br> nisl fringilla sapien quis.</p>
+        </div>
+
+
+        <div class="card card4"> <i class="fa-brands fa-instagram"></i>
+            <h2>Elementum Rhoncus</h2>
+            <p>Sollicitudin dui mauris dui <br> nunc lorem tortor pharetra.</p>
+        </div>
+    </section>
+    <section id="banner">
+        <div class="child">
+            <img src="./image/01.jpg" class="image" alt="">
+            <div class="arrow">
+                <h1>Accumsan Placerate </h1>
+                <span><i class="fa-sharp fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+        <div class="child">
+            <img src="./image/02.jpg" class="image" alt="">
+            <div class="arrow">
+                <h1>Scelerisque Etiam </h1>
+                <span><i class="fa-sharp fa-solid fa-arrow-right"></i></span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="one">
+        <p>Quis leo hendrerit lectus morbi</p>
+        <h1>Justo Mauris Tempus Pharetra</h1>
+        <div class="parent">
+            <div class="box">
+                <i class="fa-solid fa-hourglass-end"></i>
+                <h2>Sociis Natoque Penatibus</h2>
+                <p>Interdum at congue semper purus nullam<br>quis odio id justo accumsan ullamcorper<br>maecenas vel
+                    arcu nulla tincidunt elit<br> ornare.</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-paw"></i>
+                <h2>Magnis Parturient Montes</h2>
+                <p>Urna proin venenatis eros viverra ultrices<br>fringilla lectus urna consequat erat eget<br>
+                    scelerisque ligula felis nec neque nam.</p>
+            </div>
+            <div class="box">
+                <i class="fa-sharp fa-solid fa-calculator"></i>
+                <h2>Nascetur Ridiculus Aenean</h2>
+                <p>Vitae ipsum vitae velit porttitor aliquam in<br> quam aliquam ullamcorper sem a auctor<br> dapibus
+                    nisi nunc vehicula nunc quis mattis.</p>
+            </div>
+            <div class="box">
+                <i class="fa-sharp fa-solid fa-phone"></i>
+                <h2>
+                    Ullamcorper Neque Phasellus</h2>
+                <p>Pede turpis at elit nunc at urna sed ligula<br> vivamus vel erat at diam imperdiet pharetra<br>
+                    quisque justo turpis mattis ut vitae.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h2>Aliquet Lacus Nulla Erat</h2>
+                <p>Tortor aenean leo ipsum elementum non<br> cursus eu interdum ut risus proin risus nib<br> viverra
+                    eget lobortis feugiat egestas in nisl.
+
+                </p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h2>Aliquam Volutpat Curabitur</h2>
+                <p>Fusce dignissim neque vitae justo aenean ac<br> urna et leo posuere pretium nunc bibendum<br> enim
+                    quis imperdiet elementum dui dolor.</p>
+
+
+            </div>
+        </div>
+    </section>
+    <section id="dhiraj">
+        <div class="box">
+            <h4>Purus ut mi sed velit urna ut</h4>
+            <h1>Sapien Posuere In Iaculis</h1>
+            <div class="parent">
+                <div class="card">
+                    <img src="./image/girl1.jpg" class="image" alt="">
+                    <h2>A. Doe</h2>
+                    <p>Euismod nec hendrerit</p>
+                </div>
+                <div class="card">
+                    <img src="./image/girl2.jpg" class="image" alt="">
+                    <h2>B. Doe</h2>
+                    <p>Vel velit aliquam massa</p>
+                </div>
+                <div class="card">
+                    <img src="./image/girl3.jpg" class="image" alt="">
+                    <h2>C. Doe</h2>
+                    <p>Vulputate aliquet purus</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section id="india">
+        <div class="indiaHead">
+            <h4>Maecenas ultrices faucibus felis</h4>
+            <h1>Nunc Lacus Nulla Luctus Duis</h1>
+        </div>
+
+
+        <div class="parent">
+
+            <div class="card">
+                <div class="innerChild">
+                    <img src="./image/girl4.jpg" class="image" alt="">
+
+                    <div class="profession">
+                        <h3>D. Doe</h3>
+                        <h6>Adipiscing fusce eu velit</h6>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <p>Pulvinar tortor quis nisi in hac habitasse platea dictumst donec ac<br> tellus fusce venenatis
+                        laoreet elit sed est tortor molestie in<br>consectetuer fringilla suscipit ut odio ut ac.</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="innerChild">
+                    <img src="./image/girl5.jpg" class="image" alt="">
+
+                    <div class="profession">
+                        <h3>E. Doe</h3>
+                        <h6>Mauris erat aliquam leo</h6>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>Orci vitae dolor scelerisque blandit morbi eu dui sed volutpat etiam leo leo<br> bibendum vel
+                        dictum
+                        sed sollicitudin a mi pellentesque ligula nulla<br> facilisi sed bibendum ornare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="top">
+        <div class="topHead">
+            <h5>Lorem aenean nunc aenean sagittis</h5>
+            <h1>Imperdiet Massa Maecenas</h1>
+        </div>
+        <div class="parent">
+            <div class="card">
+                <img src="./image/girl6.jpg" class="image" alt="">
+                <p>05 APR 2045</p>
+                <h3>Quam Justo Suscipit At Blandit At Blandit Vitae Tellus Maecenas.</h3>
+            </div>
+            <div class="card">
+                <img src="./image/09.jpg" class="image" alt="">
+                <p>04 APR 2045</p>
+                <h3>Commodo Mauris A Semper Posuere Sem Arcu Cursus Felis Non Cursus.</h3>
+            </div>
+            <div class="card">
+                <img src="./image/girl7.jpg" class="image" alt="">
+                <p>03 APR 2045</p>
+                <h3>Enim Odio In Odio Suspendisse Commodo Suscipit Nisi Nam Tellus.</h3>
+            </div>
+        </div>
+    </section>
+    <section id="tap">
+        <div class="tapHead">
+            <h6>Enim eleifend dignissim bibendum</h6>
+            <h1>Id Tristique Id Metus Nulla</h1>
+        </div>
+        <div class="parent">
+            <div class="card">
+                <div class=" box">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                    <div>
+                        <h5>Give Us A Call:</h5>
+                        <p>+00 (123) 456 7890</p>
+                    </div>
+                </div>
+                <div class=" box1 box">
+                    <i class="img1 fa-solid fa-message"></i>
+                    <div>
+                        <h5>Send Us A Mail:</h5>
+                        <p>support@domain.com</p>
+                    </div>
+                </div>
+                <div class=" box2 box">
+                    <i class="img fa-sharp fa-solid fa-location-dot"></i>
+                    <div>
+                        <h5>Come Visit Us;</h5>
+                        <p>Directions to our location</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Purus Nullam Arcu Integer</h2>
+                <p>Elementum nisi ac volutpat vestibulum enim mi tincidunt eros sed justo magna odio sed lacus ut non
+                    ante sit amet est luctus dictum ut dolor ac.</p>
+                <input type="text" class="namefield" placeholder="NAME"><br><br>
+
+                <input type="text" class="emailfield" placeholder="EMAIL"><br><br>
+
+                <div class="btn">
+                    <button>SUBMIT</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="trip">
+
+        <h1>Foolish Developer</h1>
+        <p>Foolish Developer is a biog website you eill find great tutorials on web<br> design and developement.Here
+            each tutorials
+            is beautifully described step by step <br> with the required source code</p>
+        <div class="parent">
+            <i class=" face   fa-brands fa-square-facebook"></i>
+            <i class=" insta fa-brands fa-square-instagram"></i>
+            <i class=" googl fa-brands fa-google"></i>
+            <i class=" twit fa-brands fa-twitter"></i>
+            <i class=" link fa-brands fa-linkedin"></i>
+            <i class=" tel fa-brands fa-telegram"></i>
+        </div>
+    </section>
+</body>
+
+</html>
